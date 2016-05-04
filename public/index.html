@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>JOGA - Área Administrativa</title>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<!-- Normalize.css -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<!-- build:css css/adminstyle.min.css -->
+	<link rel="stylesheet" href="css/adminstyle.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<!-- === Content Login === -->
+			<section class="login">
+				<h1 class="login__title">Área<br><span>Administrativa</span></h1>
+				<!-- === Form Login ===  -->
+				<form class="login__form" action="">
+					<div class="login__box login__box--email">
+						<label for="email">E-mail</label>
+						<input class="login__input login__input--email" type="email" name="email" placeholder="bruno@jogaojogo.com.br">	
+					</div>
+					<div class="login__box login__box--psw">
+						<label for="psw">Senha</label>
+						<input class="login__input login__input--psw" type="password" name="psw" placeholder="********">
+					</div>
+					<button type="submit" class="btn__login">ENTRAR</button>
+				</form>
+				<!-- === /Form Login === -->
+
+				<!-- === Error Login === -->
+				<div class="login__error">
+					<p class="login__error__report"><span>Error:&nbsp;</span>Login ou Senha inválidos!</p>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

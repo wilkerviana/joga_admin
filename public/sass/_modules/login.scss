@@ -1,0 +1,151 @@
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+body{
+	background: #144e8c;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	width: 100%;
+	@media (min-width:1280px) {
+		background: url(../images/bg_login.png), #144e8c;
+		background-repeat: no-repeat;
+		background-position: top center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.wrapper{
+	border-top: 12px dashed #f47920;
+	height: 100%;
+	margin: auto;
+	width: 100%;
+	@media (min-width:1280px) {
+		border-top: none;
+	}
+}
+.container{
+	margin: 95px auto 0;
+	width: 280px;
+	@media (min-width:1280px) {
+		margin: 225px auto 0;
+		height: 100%;
+		width: 460px;
+	}
+}
+.login{
+	margin: 80px auto 0;
+	width: 100%;
+	max-width: 280px;
+	@media (min-width:1280px) {
+		max-width: 460px;
+	}
+}
+.login__title{
+	color: #50b848;
+	font-size: 1.9em;
+	font-weight: 700;
+	line-height: 1.1em;
+	margin-left: 95px;
+	position: relative;
+	span{
+		font-style: italic;
+		font-weight: 300;
+	}
+	&:before{
+		content: url(../images/brand.png);
+		position: absolute;
+		left: -95px;
+		top: -45px;
+	}
+	@media (min-width:1280px) {
+		font-size: 2em;
+		margin-left: 110px;
+	}
+}
+.login__form{
+	label{
+		color: #f47920;
+		font-style: italic;
+		font-weight: 600;
+	}
+}
+.login__input{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color:#144e8c;
+	font-size: 0.9em;
+	font-style: italic;
+	border: none;
+	display: block;
+	height: 32px;
+	margin: 5px 0;
+	outline: none;
+	padding: 8px;
+	width: 100%;
+	@media (min-width:1280px) {
+		font-size: 1em;
+		height: 36px;
+	}
+}
+.login__box{
+	@media (min-width:1280px) {
+		margin-left: 110px;
+	}
+}
+.login__box--psw{
+	float: left;
+	margin: 14px 0;
+	width: 205px;
+	@media (min-width:1280px) {
+		margin: 14px 0 0 110px;
+		width: 258px;
+	}
+}
+
+::-webkit-input-placeholder{
+	color:#144e8c;
+	font-size: 0.8em;
+	font-style: normal;
+}
+::-moz-input-placeholder{
+	color:#144e8c;
+	font-size: 0.8em;
+	font-style: normal;
+}
+.btn__login{
+	background: #f47920;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	float: right;
+	font-family: 'Rubik',sans-serif;
+	font-size: 0.8em;
+	font-weight: 500;
+	height: 34px;
+	margin: 40px 0 0;
+	padding: 0 8px;
+	@media (min-width:1280px) {
+		height: 36px;
+	}
+}
+.login__error{
+	color: #ffdd00;
+	clear: both;
+	margin: 25px 0;
+	@media (min-width:1280px) {
+		margin: 25px 0 0 110px;
+		padding-top: 5px;
+	}
+}
+.login__error__report{
+	font-style: italic;
+	font-weight: 300;
+	span{
+		font-style: normal;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
