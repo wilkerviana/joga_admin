@@ -5,14 +5,16 @@ body{
 	background: #144e8c;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
+	height: auto;
 	width: 100%;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		background: url(../images/bg_login.png), #144e8c;
 		background-repeat: no-repeat;
 		background-position: top center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		background-size: cover;
+		width: 100%;
 	}
 }
 
@@ -21,14 +23,14 @@ body{
 	height: 100%;
 	margin: auto;
 	width: 100%;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		border-top: none;
 	}
 }
 .container{
 	margin: 95px auto 0;
 	width: 280px;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		margin: 225px auto 0;
 		height: 100%;
 		width: 460px;
@@ -38,7 +40,7 @@ body{
 	margin: 80px auto 0;
 	width: 100%;
 	max-width: 280px;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		max-width: 460px;
 	}
 }
@@ -59,7 +61,7 @@ body{
 		left: -95px;
 		top: -45px;
 	}
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		font-size: 2em;
 		margin-left: 110px;
 	}
@@ -85,13 +87,13 @@ body{
 	outline: none;
 	padding: 8px;
 	width: 100%;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		font-size: 1em;
 		height: 36px;
 	}
 }
 .login__box{
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		margin-left: 110px;
 	}
 }
@@ -99,7 +101,7 @@ body{
 	float: left;
 	margin: 14px 0;
 	width: 205px;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		margin: 14px 0 0 110px;
 		width: 258px;
 	}
@@ -127,7 +129,7 @@ body{
 	height: 34px;
 	margin: 40px 0 0;
 	padding: 0 8px;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		height: 36px;
 	}
 }
@@ -135,7 +137,7 @@ body{
 	color: #ffdd00;
 	clear: both;
 	margin: 25px 0;
-	@media (min-width:1280px) {
+	@media (min-width:768px) {
 		margin: 25px 0 0 110px;
 		padding-top: 5px;
 	}
