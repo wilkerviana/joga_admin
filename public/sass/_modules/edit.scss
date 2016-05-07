@@ -1,0 +1,86 @@
+.edit__picture{
+	margin: 15px 15px 10px 0;
+	position: relative;
+	height: 195px;
+	width: 350px;
+	img{
+		height: auto;
+		width: 100%;
+	}
+}
+.btn__picture--delete{
+	position: absolute;
+	background: $joga_blue;
+	border: 0;
+	border-radius: 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	padding: 0 6px 6px 6px;
+	top: -10px;
+	right: -10px;
+	height: 25px;
+	width: 25px;
+	z-index: 999;
+}
+.edit__picture__box{
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+.edit__picture--delete{
+	background: rgba(0,0,0, .7);
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: -350px;
+	text-align: center;
+	transition: all .6s ease-in;
+	h4{
+		color: $joga_yellow;
+		font-size: 28px;
+		font-style: italic;
+		margin: 35px 0 15px;
+		span{
+			font-weight: 100;
+		}
+	}
+	.btn__picture--confirmdel{
+		background: $joga_orange;
+		display: block;
+		cursor: pointer;
+		font-size: 13px;
+		margin: 0 0 20px 90px;
+		span{
+			font-style: italic;
+			font-weight: 100;
+		}
+	}
+	.btn__picture__cancel{
+		background: none;
+		color: #fff;
+		cursor: pointer;
+		font-family: $font_rubik;
+		font-size: 13px;
+		font-weight: bold;
+		outline: none;
+		padding: 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		span{
+			font-style: italic;
+			font-weight: 100;
+		}
+	}
+}
+.edit__picture--delete--active{
+	@extend .edit__picture--delete;
+	left: 0;
+}

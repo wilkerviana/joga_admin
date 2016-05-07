@@ -1,0 +1,21 @@
+// Variables and Mixins
+$joga_green: #50b848;
+$joga_blue: #144e8c;
+$joga_orange: #f47920;
+$joga_yellow: #ffdd00;
+$font_open: 'Open Sans', sans-serif;
+$font_rubik: 'Rubik', sans-serif;
+
+@mixin grid{
+	margin: 0 auto;
+	width: 280px;
+	@media (min-width: 768px) {
+		width: 744px;
+	}
+}
+
+@mixin flexbox{
+	-webkit-display: flex;
+	-moz-display: flex;
+	display: flex;
+}

@@ -1,0 +1,325 @@
+
+.state__in{
+	background: $joga_green;
+}
+.header--default{
+	background: $joga_yellow;
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
+.navbar{
+	background: #fff;
+	position: absolute;
+	top: 40px;
+	height: 20px;
+	width: 100%;
+	@media (min-width: 768px) {
+		height: 30px;
+		top: 50px;
+	}
+	.nav{
+
+	}
+}
+
+.navbar--default{
+	display: none;
+	list-style: none;
+	position: relative;
+	@media (min-width: 768px) {
+		display: block;
+		margin: 2px 0 0 100px;
+		padding: 0;
+		&:before{
+			content: "";
+			position: absolute;
+			background: $joga_green;
+			left: -105px;
+			top: -40px;
+			border-radius: 50px;
+			border: 12px solid #fff;
+			height: 80px;
+			width: 80px;
+		}
+		&:after{
+			content: url(../images/logo_admin.png);
+			position: absolute;
+			left: -78px;
+			top: -15px;
+		}
+	}
+}
+.navbar__item{
+	display: inline-block;
+	height: 18px;
+	margin-top: 3px;
+	padding: 0 15px 3px 15px;
+	&:nth-child(2){
+		border-left: 2px solid $joga_green;
+		border-right: 2px solid $joga_green; 
+	}
+	.navbar__link{
+		color: $joga_green;
+		font-style: italic;
+		font-weight: 100;
+		text-decoration: none;
+		span{
+			font-weight: bold;
+		}
+		&:hover{
+			color: $joga_orange;
+		}
+	}
+	.current__link{
+		color: $joga_orange;
+	}
+}
+.navbar__item--logout{
+	position: absolute;
+	left: 500px;
+	.navbar__link{
+		color: #989898;
+		font-style: italic;
+		&:hover{
+			color: $joga_blue;
+		}
+	}
+}
+
+
+/*
+******************** MAIN
+*/
+.wrapper__default{
+	@include grid;
+}
+.register__top{
+	border-bottom: 2px solid #43a83b;
+	margin-top: 50px;
+	@media (min-width: 768px) {
+		margin-top: 100px;	
+	}
+}
+.register__top__title{
+	color: $joga_blue;
+	font-family: $font_open;
+	font-weight: 800;
+	line-height: 36px;
+	span{
+		font-style: italic;
+		font-weight: 100;
+	}
+}
+.register__square__block{
+	margin: 15px 0;
+	legend{
+		color: #fff;
+		display: block;
+		font-family: $font_open;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 600;
+		@media (min-width: 768px) {
+			width: 100%;
+		}
+		span{
+			font-size: 16px;
+			font-weight: 100;
+		}
+	}
+}
+.register__square--options{
+	justify-content: flex-start;
+	.register__input--tipos{
+		margin-top: 10px;
+		width: 180px;
+		label{
+			color: #fff;
+			text-align: left;
+		}
+	}
+}
+.register__square--flexbox{
+	@include flexbox;
+	flex-wrap: wrap;
+}
+.register__square--options{
+	margin: 25px auto;
+}
+.register__input{
+	margin: 23px 0 0 0;
+	label{
+		span{
+			font-weight: 100;
+		}
+	}
+	@media (min-width: 768px) {
+		margin: 25px 22px 0 0;
+	}
+}
+.register__input__title{
+	color: #fff;
+	display: block;
+	font-family: $font_open;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 600;
+}
+.register__input--default{
+	border: 0;
+	box-sizing: border-box;
+	color: $joga_blue;
+	font-family: $font_open;
+	margin: 4px 0;
+	padding: 5px 10px;
+	outline: none;
+	height: 35px;
+	width: 265px;
+	@media (min-width: 768px) {
+		width: 350px;
+	}
+}
+
+.register__input--cep{
+	max-width: 110px;
+}
+.register__input--city{
+	@media (min-width: 768px) {
+		max-width: 215px;
+	}
+}
+.register__input--phone{
+	@media (min-width: 768px) {
+		max-width: 165px;
+	}
+}
+.register__input--nota{
+	width: 60px;
+	@media (min-width: 768px) {
+		max-width: 165px;
+	}
+}
+.register__input--about{
+	textarea{
+		border: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		color: $joga_green;
+		font-family: $font_open;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 200;
+		outline: none;
+		padding: 6px;
+		resize: none;
+		width: 265px;
+		@media (min-width: 768px) {
+			width: 343px;
+		}
+	}
+}
+.register__input--picture{
+	background: #fff;
+	float: left;
+	margin: 8px 0;
+	max-height: 40px;
+	max-width: 265px;
+	input{
+		border: 0;
+		float: left;
+		width: 222px;
+		@media (min-width: 768px) {
+			width: 675px;
+		}
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+	}
+}
+.btn{
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font-family: $font_rubik;
+	font-size: 15px;
+	font-weight: bold;
+	outline: none;
+	padding: 14px;
+	text-transform: uppercase;
+}.upload__btn{
+	background: none;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	float: right;
+	height: 38px;
+	margin: 3px 0;
+	padding: 2px 6px;
+}
+.register__btn{
+	background: $joga_orange;
+	clear: both;
+	margin: 20px 0;
+	transition: all 0.2s ease-in;
+	@media (min-width: 768px) {
+		&:hover{
+			background: $joga_blue;
+		}
+	}
+}
+.modal__overlay{
+	background: rgba(0,0,0, .7);
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s ease-in;
+}
+.modal{
+	background: $joga_orange;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 30px 0;
+	position: fixed;
+	top: 150px;
+	text-align: center;
+	height: 270px;
+	width: 100%;
+	max-width: 720px;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s ease-in;
+	h4{
+		color: #fff;
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	h5{
+		color: #fff;
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 100;
+		margin: 15px 0;
+		span{
+			color: $joga_yellow;
+		}
+	}
+	.btn--proceed{
+		background: $joga_green;
+		span{
+			font-style: italic;
+			font-weight: 100;
+		}
+	}
+}
+.modal.active,
+.modal__overlay.active{
+	opacity: 1;
+	visibility: visible;
+}
