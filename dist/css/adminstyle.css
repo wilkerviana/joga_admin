@@ -170,20 +170,19 @@ body {
       margin: 2px 0 0 100px;
       padding: 0; }
       .navbar--default:before {
-        content: "";
+        content: url(../images/logo_admin.png);
         position: absolute;
+        padding: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         background: #50b848;
         left: -105px;
         top: -40px;
-        border-radius: 50px;
+        border-radius: 50%;
         border: 12px solid #fff;
-        height: 80px;
-        width: 80px; }
-      .navbar--default:after {
-        content: url(../images/logo_admin.png);
-        position: absolute;
-        left: -78px;
-        top: -15px; } }
+        height: 105px;
+        width: 105px; } }
 
 .navbar__item {
   display: inline-block;
@@ -239,6 +238,8 @@ body {
   .register__top__title span {
     font-style: italic;
     font-weight: 100; }
+    .register__top__title span .result__word {
+      color: #fff; }
 
 .register__square__block {
   margin: 15px 0; }
@@ -394,9 +395,10 @@ body {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s ease-in; }
+  transition: all .5s ease-in;
+  z-index: 2; }
 
-.modal {
+.modal, .modal--delete {
   background: #f47920;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -412,25 +414,31 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .5s ease-in; }
-  .modal h4 {
+  .modal h4, .modal--delete h4 {
     color: #fff;
     font-size: 30px;
     margin: 15px 0; }
-  .modal h5 {
+  .modal h5, .modal--delete h5 {
     color: #fff;
     font-size: 30px;
     font-style: italic;
     font-weight: 100;
     margin: 15px 0; }
-    .modal h5 span {
+    .modal h5 span, .modal--delete h5 span {
       color: #ffdd00; }
-  .modal .btn--proceed {
+  .modal .btn--proceed, .modal--delete .btn--proceed {
     background: #50b848; }
-    .modal .btn--proceed span {
+    .modal .btn--proceed span, .modal--delete .btn--proceed span {
+      font-style: italic;
+      font-weight: 100; }
+  .modal .btn__delete__cancel, .modal--delete .btn__delete__cancel {
+    background: none; }
+    .modal .btn__delete__cancel span, .modal--delete .btn__delete__cancel span {
       font-style: italic;
       font-weight: 100; }
 
 .modal.active,
+.modal--delete.active,
 .modal__overlay.active {
   opacity: 1;
   visibility: visible; }
@@ -512,5 +520,130 @@ body {
 
 .edit__picture--delete--active {
   left: 0; }
+
+.list__table {
+  display: table;
+  margin: 25px auto;
+  width: 744px; }
+
+.list__table__header, .list__table__item {
+  display: table-row; }
+
+.list__table__cell {
+  display: table-cell;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 8px 5px 0;
+  text-align: center; }
+  .list__table__cell:nth-child(1) {
+    width: 46px; }
+  .list__table__cell:nth-child(2) {
+    width: 176px; }
+  .list__table__cell:nth-child(3) {
+    width: 211px; }
+  .list__table__cell:nth-child(4) {
+    width: 225px; }
+
+.list__table__cell__title {
+  color: #fff;
+  font-family: 'Open Sans',sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-align: left; }
+
+.list__table__content {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  height: 34px; }
+
+.list__table__input {
+  border: 0;
+  color: #144e8c;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 36px;
+  margin: 0 2px;
+  padding: 4px 8px;
+  outline: none; }
+
+.list__table__input--id {
+  width: 42px; }
+
+.list__table__input--type {
+  width: 176px; }
+
+.list__table__input--name1 {
+  width: 211px; }
+
+.list__table__input--name2 {
+  margin: 0 0 0 2px;
+  width: 225px; }
+
+.list__table--edit, .list__table--del {
+  border: 0;
+  padding: 7px 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+  height: 36px;
+  width: 35px; }
+  .list__table--edit .list__btn--edit, .list__table--del .list__btn--edit, .list__table--del .list__btn--del {
+    background: #144e8c;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    height: 36px;
+    top: 0;
+    left: 0;
+    padding: 8px 4px 8px 0;
+    width: 37px; }
+
+.list__table--del .list__btn--del {
+  background: #f47920; }
+
+.pagination {
+  margin: 0 auto 100px;
+  width: 300px; }
+  .pagination nav ul {
+    list-style: none; }
+    .pagination nav ul li {
+      display: inline-block;
+      font-family: 'Rubik', sans-serif;
+      margin: 0 15px; }
+      .pagination nav ul li:nth-child(1) {
+        margin: 0 15px 0 0; }
+      .pagination nav ul li a {
+        color: #144e8c;
+        font-size: 22px;
+        font-weight: 500;
+        text-decoration: none; }
+      .pagination nav ul li .current__page {
+        color: #fff; }
+
+.search__fail {
+  margin: 50px auto; }
+
+.flexbox__search {
+  -webkit-display: flex;
+  -moz-display: flex;
+  display: flex; }
+
+.search__fail__resume {
+  padding: 60px 40px; }
+  .search__fail__resume p {
+    color: #fff;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px; }
+    .search__fail__resume p span {
+      font-weight: 100; }
 
 /*# sourceMappingURL=adminstyle.css.map */

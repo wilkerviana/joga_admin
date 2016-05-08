@@ -1,10 +1,18 @@
-var sucessRegister = function(){
+var animationModal = function(){
 	$('.register__btn').click(function(){
 		$('.modal__overlay').addClass('active');
 		$('.modal').addClass('active');
 		$('.btn--proceed').click(function(){
 			$('.modal__overlay').removeClass('active');
 		$('.modal').removeClass('active');
+		});
+	});
+	$('.list__btn--del').click(function(){
+		$('.modal__overlay').addClass('active');
+		$('.modal--delete').addClass('active');
+		$('.btn__delete__cancel').click(function(){
+			$('.modal__overlay').removeClass('active');
+		$('.modal--delete').removeClass('active');
 		});
 	});
 }
@@ -18,5 +26,5 @@ var deletePicture = function(){
 	});
 }
 
-$(document).ready(sucessRegister);
+$(document).ready(animationModal);
 $(document).ready(deletePicture);

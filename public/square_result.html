@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>JOGA - Área Administrativa</title>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+	<!-- Normalize.css -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<!-- build:css css/adminstyle.min.css -->
+	<link rel="stylesheet" href="css/adminstyle.css">
+	<!-- endbuild -->
+</head>
+<body class="state__in">
+	<header class="header--default">
+		<div class="navbar">
+			<div class="nav wrapper__default">
+				<ul class="navbar--default">
+					<li class="navbar__item"><a class="navbar__link" href="square_edit.html"><span>Editar</span> Quadra</a></li>
+					<li class="navbar__item"><a class="navbar__link" href="square_list.html"><span>Listar</span> Quadras</a></li>
+					<li class="navbar__item"><a class="navbar__link" href="square_register.html"><span>Cadastrar</span> nova Quadra</a></li>
+					<li class="navbar__item navbar__item--logout"><a class="navbar__link" href="">Fazer Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="wrapper__default">
+			<div class="register__top">
+				<h1 class="register__top__title">
+					Editar Quadra<br><span>Resultado da busca para "<span class="result__word">Futebol</span>"</span>
+				</h1>
+			</div>
+			<section class="list__table">
+				<!-- HEADER table -->
+				<header class="list__table__header">
+					<div class="list__table__cell list__table__cell__title">ID</div>
+					<div class="list__table__cell list__table__cell__title">Tipo da quadra</div>
+					<div class="list__table__cell list__table__cell__title">Nome da quadra 1</div>
+					<div class="list__table__cell list__table__cell__title">Nome da quadra 2</div>
+				</header>
+				<!-- /HEADER table -->
+
+
+				<!-- Table row -->
+				<article class="list__table__item">
+					<!-- ID item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--id" value="1">
+					</div>
+					<!-- Type item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--type" value="Futebol de Campo">
+					</div>
+					<!-- NAME1 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name1" value="Campo da">
+					</div>
+					<!-- NAME2 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name2" value="Portuguesinha">
+					</div>
+					<!-- EDIT button -->
+					<div class="list__table__content">
+						<a class="list__table--edit" href="square_edit.html">
+							<button class="list__btn--edit"><img src="images/icon_edit.png" alt=""></button>
+						</a>
+					</div>
+					<!-- DELETE button -->
+					<div class="list__table__content">
+						<span class="list__table--del">
+							<button class="list__btn--del"><img src="images/icon_del.png" alt=""></button>
+						</span>
+					</div>
+				</article>
+				<!-- /Table row -->
+				<!-- Table row -->
+				<article class="list__table__item">
+					<!-- ID item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--id" value="28">
+					</div>
+					<!-- Type item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--type" value="Futebol Society">
+					</div>
+					<!-- NAME1 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name1" value="Chute Inicial">
+					</div>
+					<!-- NAME2 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name2" value="">
+					</div>
+					<!-- EDIT button -->
+					<div class="list__table__content">
+						<a class="list__table--edit" href="square_edit.html">
+							<button class="list__btn--edit"><img src="images/icon_edit.png" alt=""></button>
+						</a>
+					</div>
+					<!-- DELETE button -->
+					<div class="list__table__content">
+						<span class="list__table--del">
+							<button class="list__btn--del"><img src="images/icon_del.png" alt=""></button>
+						</span>
+					</div>
+				</article>
+				<!-- /Table row -->
+				<!-- Table row -->
+				<article class="list__table__item">
+					<!-- ID item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--id" value="94">
+					</div>
+					<!-- Type item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--type" value="Futebol de Salão">
+					</div>
+					<!-- NAME1 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name1" value="7 de Setembro">
+					</div>
+					<!-- NAME2 item -->
+					<div class="list__table__content">
+						<input type="text" class="list__table__input list__table__input--name2" value="Futsal">
+					</div>
+					<!-- EDIT button -->
+					<div class="list__table__content">
+						<a class="list__table--edit" href="square_edit.html">
+							<button class="list__btn--edit"><img src="images/icon_edit.png" alt=""></button>
+						</a>
+					</div>
+					<!-- DELETE button -->
+					<div class="list__table__content">
+						<span class="list__table--del">
+							<button class="list__btn--del"><img src="images/icon_del.png" alt=""></button>
+						</span>
+					</div>
+				</article>
+				<!-- /Table row -->
+			</section>
+			<!-- LIST PAGINATION -->
+			<div class="pagination">
+				<nav>
+					<ul>
+						<li><a class="current__page" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">></a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- /LIST PAGINATION -->
+		</div>
+		<!-- Success Register -->
+		<div class="modal__overlay"></div>
+		<div class="wrapper__default">
+			<div class="modal">
+				<h4 class="modal__title">Alterações efetuadas com sucesso!</h4>
+				<h5 class="modal__text">"<span>Campo da Portuguesinha</span>"</h5>
+				<button type="button" class="btn btn--proceed">OK, <span>continuar o jogo</span></button>
+			</div>
+			<div class="modal--delete">
+				<h4 class="modal__title">Confirma a exclusão da quadra?</h4>
+				<h5 class="modal__text">"<span>Campo da Portuguesinha</span>"</h5>
+				<button type="button" class="btn btn--proceed">OK, <span>continuar o jogo</span></button>
+				<button type="button" class="btn btn__delete__cancel">Arregar, <span>cancelar</span></button>
+			</div>
+		</div>
+	</main>
+	<!-- Hosted Google Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!-- build:js js/admintools.min.js -->
+	<script src="js/admintools.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

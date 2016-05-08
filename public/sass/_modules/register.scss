@@ -32,21 +32,19 @@
 		margin: 2px 0 0 100px;
 		padding: 0;
 		&:before{
-			content: "";
+			content: url(../images/logo_admin.png);
 			position: absolute;
+			padding: 15px;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
 			background: $joga_green;
 			left: -105px;
 			top: -40px;
-			border-radius: 50px;
+			border-radius: 50%;
 			border: 12px solid #fff;
-			height: 80px;
-			width: 80px;
-		}
-		&:after{
-			content: url(../images/logo_admin.png);
-			position: absolute;
-			left: -78px;
-			top: -15px;
+			height: 105px;
+			width: 105px;
 		}
 	}
 }
@@ -109,6 +107,9 @@
 	span{
 		font-style: italic;
 		font-weight: 100;
+		.result__word{
+			color: #fff;
+		}
 	}
 }
 .register__square__block{
@@ -278,8 +279,9 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: all .5s ease-in;
+	z-index: 2;
 }
-.modal{
+.modal, .modal--delete{
 	background: $joga_orange;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -317,8 +319,16 @@
 			font-weight: 100;
 		}
 	}
+	.btn__delete__cancel{
+		background: none;
+		span{
+			font-style: italic;
+			font-weight: 100;
+		}
+	}
 }
 .modal.active,
+.modal--delete.active,
 .modal__overlay.active{
 	opacity: 1;
 	visibility: visible;
