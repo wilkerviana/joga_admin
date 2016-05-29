@@ -39,7 +39,16 @@ module.exports = function(grunt)
         ext: '.css'
       }
     },
-
+    cmq: {
+      options: {
+        log: false
+      },
+      combine: {
+        files:{
+          'public/css':['public/css/*.css']
+        }
+      }
+    },
     watch: {
 
       sass: {
@@ -85,4 +94,5 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
 }

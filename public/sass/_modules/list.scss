@@ -1,7 +1,10 @@
 .list__table{
 	display: table;
 	margin: 25px auto;
-	width: 744px;
+	width: 265px;
+	@media (min-width: 768px) {
+		width: 744px;
+	}
 }
 .list__table__header , .list__table__item{
 	display: table-row;
@@ -15,16 +18,28 @@
 	padding: 8px 5px 0;
 	text-align: center;
 	&:nth-child(1){ 
+		display: none;
 		width: 46px;
+		@media (min-width: 768px) {
+			display: table-cell;
+		}
 	}
 	&:nth-child(2){
+		display: none;
 		width: 176px;
+		@media (min-width: 768px) {
+			display: table-cell;
+		}
 	}
 	&:nth-child(3){
 		width: 211px;
 	}
 	&:nth-child(4){
+		display: none;
 		width: 225px;
+		@media (min-width: 768px) {
+			display: table-cell;
+		}
 	}
 }
 .list__table__cell__title{
@@ -34,12 +49,20 @@
 	font-weight: 600;
 	text-align: left;
 }
-
 .list__table__content{
 	display: table-cell;
 	margin: 0;
 	padding: 0;
 	height: 34px;
+	@media (max-width: 768px) {
+		width: 190px;
+	}
+}
+.list__off__xs{
+	display: none;
+	@media (min-width: 768px) {
+		display: table-cell;
+	}
 }
 .list__table__input{
 	border: 0;
@@ -53,17 +76,35 @@
 	outline: none;
 }
 .list__table__input--id{
-	width: 42px;
+	width: 0;
+	display: none;
+	@media (min-width: 768px) {
+		display: table-cell;
+		width: 42px;
+	}
 }
 .list__table__input--type{
-	width: 176px;
+	width: 0;
+	display: none;
+	@media (min-width: 768px) {
+		display: table-cell;
+		width: 176px;
+	}
 }
 .list__table__input--name1{
-	width: 211px;
+	width: 190px;
+	@media (min-width: 768px) {
+		width: 211px;
+	}
 }
 .list__table__input--name2{
-	margin: 0 0 0 2px;
-	width: 225px;
+	width: 0;
+	display: none;
+	@media (min-width: 768px) {
+		display: table-cell;
+		width: 225px;
+		margin: 0 0 0 2px;
+	}
 }
 .list__table--edit{
 	border: 0;
@@ -97,13 +138,13 @@
 }
 .list__table--del{
 	@extend .list__table--edit;
-	// &:before{
-	// 	content: url(../images/icon_del.png);
-	// 	position: absolute;
-	// 	top: 8px;
-	// 	left: 8px;
-	// 	z-index: 1;
-	// }
+	&:before{
+		// content: url(../images/icon_del.png);
+		// position: absolute;
+		// top: 8px;
+		// left: 8px;
+		// z-index: 1;
+}
 	.list__btn--del{
 		@extend .list__btn--edit;
 		background: $joga_orange;
@@ -139,16 +180,24 @@
 	margin: 50px auto;
 }
 .flexbox__search{
-	@include flexbox;
+	display: block;
+	@media (min-width: 768px) {
+		@include flexbox;	
+	}
 }
 .search__fail__resume{
-	padding: 60px 40px;
+	@media (min-width: 768px) {
+		padding: 60px 40px;	
+	}
 	p{
 		color: #fff;
-		font-size: 26px;
+		font-size: 24px;
 		font-style: italic;
 		font-weight: 600;
 		letter-spacing: 1px;
+		@media (min-width: 768px) {
+			font-size: 26px;
+		}
 		span{
 			font-weight: 100;
 		}
