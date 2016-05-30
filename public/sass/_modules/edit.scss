@@ -1,8 +1,12 @@
 .edit__picture{
 	margin: 15px 15px 10px 0;
 	position: relative;
-	height: 195px;
-	width: 350px;
+	height: 146px;
+	width: 270px;
+	@media (min-width: 768px) {
+		height: 195px;
+		width: 350px;
+	}
 	img{
 		height: auto;
 		width: 100%;
@@ -40,27 +44,38 @@
 	width: 100%;
 	position: absolute;
 	top: 0;
-	left: -350px;
+	left: -270px;
 	text-align: center;
 	transition: all .6s ease-in;
 	h4{
 		color: $joga_yellow;
-		font-size: 28px;
+		font-size: 22px;
 		font-style: italic;
-		margin: 35px 0 15px;
+		margin: 10px 0 15px;
 		span{
 			font-weight: 100;
+		}
+	}
+	@media (min-width: 768px) {
+		left: -350px;
+		h4{
+			font-size: 28px;
+			margin: 35px 0 15px;	
 		}
 	}
 	.btn__picture--confirmdel{
 		background: $joga_orange;
 		display: block;
 		cursor: pointer;
-		font-size: 13px;
-		margin: 0 0 20px 90px;
+		font-size: 12px;
+		margin: 0 auto 10px;
 		span{
 			font-style: italic;
 			font-weight: 100;
+		}
+		@media (min-width: 768px) {
+			font-size: 13px;
+			margin: 0 0 20px 90px;
 		}
 	}
 	.btn__picture__cancel{

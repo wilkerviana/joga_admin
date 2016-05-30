@@ -127,12 +127,97 @@ body {
 	width: 100%;
 }
 
+/* >>> MENU MOBILE <<< */
+
+.hamburger-menu {
+	background: none;
+	border: 0;
+	margin: 10px;
+	outline: none;
+}
+
+.close-menu {
+	background: #144e8c;
+	border: 0;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 20px;
+	outline: none;
+	padding: 4px 12px;
+	position: absolute;
+	top: -15px;
+	right: -10px;
+}
+
+.navbar--xs {
+	background: #f47920;
+	margin: 0;
+	position: absolute;
+	top: 30px;
+	left: -250px;
+	width: 240px;
+	z-index: 999;
+	transition: all 0.8s ease-in-out;
+}
+
+.navbar--xs .navbar--mobile {
+	margin: 0;
+	padding: 2px 10px;
+	z-index: 999;
+}
+
+.navbar--xs .navbar__item--mobile {
+	list-style: none;
+	margin: 5px 0;
+	text-transform: uppercase;
+	border-bottom: 2px solid #d96b1b;
+	padding: 6px 0 10px;
+}
+
+.navbar--xs .navbar__item--mobile:last-child {
+	border-bottom: 0;
+}
+
+.navbar--xs .navbar__item--mobile .navbar__link--mobile {
+	color: #fff;
+	font-family: "Rubik", sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+.navbar--xs .navbar__item--mobile .navbar__link--mobile span {
+	font-family: "Open Sans", sans-serif;
+	font-style: italic;
+	font-weight: 700;
+	text-transform: lowercase;
+}
+
+.navbar--xs .navbar__item--mobile .navbar__logout--mobile {
+	color: #ffdd00;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 100;
+	text-transform: initial;
+}
+
+.navbar--xs.active {
+	left: 0;
+}
+
+.brand--xs {
+	position: absolute;
+	top: 15px;
+	right: 12px;
+}
+
 .navbar {
 	background: #fff;
 	position: absolute;
 	top: 40px;
-	height: 20px;
+	height: 30px;
 	width: 100%;
+	z-index: -1;
 }
 
 .navbar--default {
@@ -378,9 +463,9 @@ body {
 	position: fixed;
 	top: 150px;
 	text-align: center;
-	height: 270px;
+	height: 240px;
 	width: 100%;
-	max-width: 720px;
+	max-width: 270px;
 	z-index: 999;
 	opacity: 0;
 	visibility: hidden;
@@ -390,14 +475,14 @@ body {
 .modal h4,
 .modal--delete h4 {
 	color: #fff;
-	font-size: 30px;
+	font-size: 17px;
 	margin: 15px 0;
 }
 
 .modal h5,
 .modal--delete h5 {
 	color: #fff;
-	font-size: 30px;
+	font-size: 16px;
 	font-style: italic;
 	font-weight: 100;
 	margin: 15px 0;
@@ -440,8 +525,8 @@ body {
 .edit__picture {
 	margin: 15px 15px 10px 0;
 	position: relative;
-	height: 195px;
-	width: 350px;
+	height: 146px;
+	width: 270px;
 }
 
 .edit__picture img {
@@ -484,7 +569,7 @@ body {
 	width: 100%;
 	position: absolute;
 	top: 0;
-	left: -350px;
+	left: -270px;
 	text-align: center;
 	transition: all .6s ease-in;
 }
@@ -492,9 +577,9 @@ body {
 .edit__picture--delete h4,
 .edit__picture--delete--active h4 {
 	color: #ffdd00;
-	font-size: 28px;
+	font-size: 22px;
 	font-style: italic;
-	margin: 35px 0 15px;
+	margin: 10px 0 15px;
 }
 
 .edit__picture--delete h4 span,
@@ -507,8 +592,8 @@ body {
 	background: #f47920;
 	display: block;
 	cursor: pointer;
-	font-size: 13px;
-	margin: 0 0 20px 90px;
+	font-size: 12px;
+	margin: 0 auto 10px;
 }
 
 .edit__picture--delete .btn__picture--confirmdel span,
@@ -769,9 +854,22 @@ body {
 	padding-top: 5px;
 }
 
+.hamburger-menu {
+	display: none;
+}
+
+.navbar--xs {
+	display: none;
+}
+
+.brand--xs {
+	display: none;
+}
+
 .navbar {
 	height: 30px;
 	top: 50px;
+	z-index: 0;
 }
 
 .navbar--default {
@@ -842,6 +940,44 @@ body {
 
 .register__btn:hover {
 	background: #144e8c;
+}
+
+.modal,
+.modal--delete {
+	height: 270px;
+	max-width: 720px;
+}
+
+.modal h4,
+.modal--delete h4 {
+	font-size: 30px;
+}
+
+.modal h5,
+.modal--delete h5 {
+	font-size: 30px;
+}
+
+.edit__picture {
+	height: 195px;
+	width: 350px;
+}
+
+.edit__picture--delete,
+.edit__picture--delete--active {
+	left: -350px;
+}
+
+.edit__picture--delete h4,
+.edit__picture--delete--active h4 {
+	font-size: 28px;
+	margin: 35px 0 15px;
+}
+
+.edit__picture--delete .btn__picture--confirmdel,
+.edit__picture--delete--active .btn__picture--confirmdel {
+	font-size: 13px;
+	margin: 0 0 20px 90px;
 }
 
 .list__table {

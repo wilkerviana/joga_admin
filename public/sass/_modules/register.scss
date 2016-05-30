@@ -1,4 +1,3 @@
-
 .state__in{
 	background: $joga_green;
 }
@@ -8,18 +7,98 @@
 	height: 50px;
 	width: 100%;
 }
+/* >>> MENU MOBILE <<< */
+.hamburger-menu{
+	background: none;
+	border: 0;
+	margin: 10px;
+	outline: none;
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+.close-menu{
+	background: $joga_blue;
+	border: 0;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 20px;
+	outline: none;
+	padding: 4px 12px;
+	position: absolute;
+	top: -15px;
+	right: -10px;
+}
+.navbar--xs{
+	background: $joga_orange;
+	margin: 0;
+	position: absolute;
+	top: 30px;
+	left: -250px;
+	width: 240px;
+	z-index: 999;
+	transition: all 0.8s ease-in-out;
+	@media (min-width: 768px) {
+		display: none;
+	}
+	.navbar--mobile{
+		margin: 0;
+		padding: 2px 10px;
+		z-index: 999;
+	}
+	.navbar__item--mobile{
+		list-style: none;
+		margin: 5px 0;
+		text-transform: uppercase;
+		border-bottom: 2px solid #d96b1b;
+		padding: 6px 0 10px;
+		&:last-child{
+			border-bottom: 0;
+		}
+		.navbar__link--mobile{
+			color: #fff;
+			font-family: $font_rubik;
+			font-size: 20px;
+			font-weight: 100;
+			text-decoration: none;
+			span{
+				font-family: $font_open;
+				font-style: italic;
+				font-weight: 700;
+				text-transform: lowercase;
+			}
+		}
+		.navbar__logout--mobile{
+			color: $joga_yellow;
+			font-size: 16px;
+			font-style: italic;
+			font-weight: 100;
+			text-transform: initial;
+		}
+	}
+}
+.navbar--xs.active{
+	left: 0;
+}
+.brand--xs{
+	position: absolute;
+	top: 15px;
+	right: 12px;
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
 .navbar{
 	background: #fff;
 	position: absolute;
 	top: 40px;
-	height: 20px;
+	height: 30px;
 	width: 100%;
+	z-index: -1;
 	@media (min-width: 768px) {
 		height: 30px;
 		top: 50px;
-	}
-	.nav{
-
+		z-index: 0;
 	}
 }
 
@@ -281,6 +360,7 @@
 	transition: all .5s ease-in;
 	z-index: 2;
 }
+
 .modal, .modal--delete{
 	background: $joga_orange;
 	-webkit-box-sizing: border-box;
@@ -290,26 +370,36 @@
 	position: fixed;
 	top: 150px;
 	text-align: center;
-	height: 270px;
+	height: 240px;
 	width: 100%;
-	max-width: 720px;
+	max-width: 270px;
 	z-index: 999;
 	opacity: 0;
 	visibility: hidden;
 	transition: all .5s ease-in;
 	h4{
 		color: #fff;
-		font-size: 30px;
+		font-size: 17px;
 		margin: 15px 0;
 	}
 	h5{
 		color: #fff;
-		font-size: 30px;
+		font-size: 16px;
 		font-style: italic;
 		font-weight: 100;
 		margin: 15px 0;
 		span{
 			color: $joga_yellow;
+		}
+	}
+	@media (min-width: 768px) {
+		height: 270px;
+		max-width: 720px;
+		h4{
+			font-size: 30px;
+		}
+		h5{
+			font-size: 30px;
 		}
 	}
 	.btn--proceed{
