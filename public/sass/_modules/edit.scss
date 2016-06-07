@@ -99,3 +99,72 @@
 	@extend .edit__picture--delete;
 	left: 0;
 }
+.edit__state{
+	height: 50px;
+	position: relative;
+}
+.edit__state h5{
+	color: #fff;
+	display: inline-block;
+	font-family: $font_open;
+	font-size: 16px;
+	font-weight: 400;
+	position: absolute;
+	top: -10px;
+}
+.edit__state .switch{
+	display: inline-block;
+	position: relative;
+}
+.edit__state .switch > label{
+	background: #fff;
+	border: 0;
+	display: block;
+	position: relative;
+	margin: 8px 0 0 150px;
+	width: 90px;
+	height: 36px;
+	transition: all .3s ease-in-out;
+	&:before{
+		background: $joga_blue;
+		content: '';
+		margin: 3px;
+		width: 42px;
+		height: 30px;
+		position: absolute;
+		transition: all .3s ease-in-out;
+	}
+	&:after{
+		content: 'NÃO';
+		color: $joga_orange;
+		position: absolute;
+		right: 0;
+		margin: 8px 5px;
+		z-index: 1;
+	}
+}
+.edit__state .switch input{
+	position: absolute;
+	display: none;
+}
+.edit__state .switch input:checked + label{
+	background: $joga_orange;
+	&:before{
+		content: '';
+		background: $joga_blue;
+		position: absolute;
+		margin: 3px;
+		width: 42px;
+		height: 30px;
+		margin-left: 42px;
+		z-index: 2;
+	}
+	&:after{
+		content: 'SIM';
+		color: #fff;
+		position: absolute;
+		left: 0;
+		margin: 8px 5px;
+		z-index: 1;
+	}
+}

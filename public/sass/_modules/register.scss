@@ -227,6 +227,14 @@
 .register__square--options{
 	margin: 25px auto;
 }
+.register__checkbox{
+	display: inline-block;
+	position: relative;
+	input{
+		position: relative;
+		outline: none;
+	}
+}
 .register__input{
 	margin: 23px 0 0 0;
 	label{
@@ -260,7 +268,6 @@
 		width: 350px;
 	}
 }
-
 .register__input--cep{
 	max-width: 110px;
 }
@@ -278,6 +285,24 @@
 	width: 60px;
 	@media (min-width: 768px) {
 		max-width: 165px;
+	}
+}
+.register__input--nota--progress{
+	display: inline-block;
+	position: relative;
+	.nota__icon{
+		position: absolute;
+		top: -15px;
+		left: 10px;
+		width: 135px;
+		span{
+			-webkit-filter: brightness(25%) hue-rotate(25deg);
+			opacity: 0.5;
+		}
+		span.active{
+			-webkit-filter: none;
+			opacity: 1;
+		}
 	}
 }
 .register__input--about{

@@ -344,6 +344,16 @@ body {
 	margin: 25px auto;
 }
 
+.register__checkbox {
+	display: inline-block;
+	position: relative;
+}
+
+.register__checkbox input {
+	position: relative;
+	outline: none;
+}
+
 .register__input {
 	margin: 23px 0 0 0;
 }
@@ -379,6 +389,28 @@ body {
 
 .register__input--nota {
 	width: 60px;
+}
+
+.register__input--nota--progress {
+	display: inline-block;
+	position: relative;
+}
+
+.register__input--nota--progress .nota__icon {
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	width: 135px;
+}
+
+.register__input--nota--progress .nota__icon span {
+	-webkit-filter: brightness(25%) hue-rotate(25deg);
+	opacity: 0.5;
+}
+
+.register__input--nota--progress .nota__icon span.active {
+	-webkit-filter: none;
+	opacity: 1;
 }
 
 .register__input--about textarea {
@@ -624,6 +656,85 @@ body {
 
 .edit__picture--delete--active {
 	left: 0;
+}
+
+.edit__state {
+	height: 50px;
+	position: relative;
+}
+
+.edit__state h5 {
+	color: #fff;
+	display: inline-block;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	position: absolute;
+	top: -10px;
+}
+
+.edit__state .switch {
+	display: inline-block;
+	position: relative;
+}
+
+.edit__state .switch > label {
+	background: #fff;
+	border: 0;
+	display: block;
+	position: relative;
+	margin: 8px 0 0 150px;
+	width: 90px;
+	height: 36px;
+	transition: all .3s ease-in-out;
+}
+
+.edit__state .switch > label:before {
+	background: #144e8c;
+	content: '';
+	margin: 3px;
+	width: 42px;
+	height: 30px;
+	position: absolute;
+	transition: all .3s ease-in-out;
+}
+
+.edit__state .switch > label:after {
+	content: 'NÃO';
+	color: #f47920;
+	position: absolute;
+	right: 0;
+	margin: 8px 5px;
+	z-index: 1;
+}
+
+.edit__state .switch input {
+	position: absolute;
+	display: none;
+}
+
+.edit__state .switch input:checked + label {
+	background: #f47920;
+}
+
+.edit__state .switch input:checked + label:before {
+	content: '';
+	background: #144e8c;
+	position: absolute;
+	margin: 3px;
+	width: 42px;
+	height: 30px;
+	margin-left: 42px;
+	z-index: 2;
+}
+
+.edit__state .switch input:checked + label:after {
+	content: 'SIM';
+	color: #fff;
+	position: absolute;
+	left: 0;
+	margin: 8px 5px;
+	z-index: 1;
 }
 
 .list__table {
